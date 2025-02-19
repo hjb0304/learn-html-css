@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소, popover 속성</title>
+    <style>
+      .panel-dialog::backdrop {
+        background: linear-gradient(to bottom, #ffefba, #ffffff);
+      }
+    </style>
+    <script type="module">
+      // DOM 선택 부분
+      const showDialogButton = document.querySelector('.show-dialog');
+      const closeDialogButton = document.querySelector('.close-dialog');
+      const panelDialog = document.querySelector('.panel-dialog');
+
+      // 함수 구현 부분
+      const openDialog = () => {
+        panelDialog.showModal();
+      };
+
+      const closeDialog = () => {
+        panelDialog.close();
+      };
+
+      // 이벤트 바인딩 부분
+      showDialogButton.addEventListener('click', openDialog);
+      closeDialogButton.addEventListener('click', closeDialog);
+    </script>
+  </head>
+  <body>
+    <h1>dialog 요소</h1>
+    <div class="dialog-area">
+      <button class="show-dialog">모달창 보기</button>
+      <dialog class="panel-dialog" aria-labelledby="event">
+        <!-- 속성 값이 id 값이랑 같은 요소의 텍스트를 라벨으로 -->
+        <h2 id="event">깜짝 혜택</h2>
+        <p>
+          민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+          국방상 또는 국민경제상 긴절한 필요로 인하여 법률이 정하는 경우를
+          제외하고는, 사영기업을 국유 또는 공유로 이전하거나 그 경영을 통제 또는
+          관리할 수 없다.
+        </p>
+        <button type="button" class="close-dialog">닫기</button>
+      </dialog>
+    </div>
+
+    <h1>popover 속성</h1>
+    <button type="button" popovertarget="popoverContent" class="button-popover">
+      팝오버 보기
+    </button>
+    <div popover id="popoverContent">
+      <p>팝오버 내용</p>
+    </div>
+  </body>
+</html>
