@@ -1,0 +1,76 @@
+/* 전역 변수 정의 */
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: orange;
+}
+
+:root {
+  /* 색상 팔레트 */
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --orange: orange;
+  --yellow: yellow;
+  --light-blue: lightblue;
+
+  /* 주요 색상 */
+  --primary-color: var(--orange);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--yellow);
+  --border-color: var(--black);
+
+  /* size */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --default: 1rem;
+  --large: 1.125rem;
+}
+
+.lion {
+  color: red;
+  border: 1px solid green;
+  padding: 0.5em;
+  .parent {
+    padding: inherit;
+    .child {
+      color: black;
+      border: inherit;
+      border-color: blue;
+    }
+  }
+}
+
+.container {
+  color: var(--text-color);
+  .parent {
+    --text-color: blue;
+    .child {
+      color: var(--text-color);
+    }
+  }
+}
+
+.wrapper {
+  button {
+    font-size: var(--font-size, 1rem);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  button.open {
+    --font-size: var(--default);
+    --bg-color: var(--green);
+    --text-color: var(--red);
+  }
+  button.close {
+    --font-size: var(--small);
+  }
+  button.popup {
+    --font-size: var(--medium);
+  }
+  button.info {
+    --font-size: var(--large);
+  }
+}
