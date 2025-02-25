@@ -1,0 +1,77 @@
+@import url(/src/common/mini-reset.css);
+
+:root {
+  --green: #22be61;
+  --orange: #e3a368;
+  --gray: #9b9a90;
+  --light-gray: #f9fefe;
+  --spacing-20: 20px;
+}
+
+body {
+  margin: 50px;
+  font-family: 'Pretendard';
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+/* 알림 */
+.notification {
+  /* --primary-color: var(--green);
+  --secondary-color: var(--orange); */
+  --text-color: var(--gray);
+  --border-color: var(--light-gray);
+  --padding: var(--spacing-20);
+
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(114, 119, 124, 0.2);
+  position: relative;
+  > * {
+    display: inline-block;
+  }
+  .notification-icon {
+    width: 28px;
+    height: 28px;
+    background-color: #11d975;
+    border-radius: 5px;
+    margin-right: 20px;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .notification-info {
+    h2 {
+      color: var(--primary-color);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    p {
+      color: var(--border-color);
+    }
+  }
+  .notification-time {
+    color: var(--primary-color);
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  &.green {
+    --primary-color: var(--green);
+  }
+  &.orange {
+    --primary-color: var(--orange);
+  }
+}
