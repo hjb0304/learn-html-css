@@ -21,6 +21,25 @@
   <body>
     <h1>아바타 컴포넌트</h1>
     <h2>인터랙션이 없는 아바타 컴포넌트</h2>
-    <h2>인터랙션이 있는 아바타 컴포넌트</h2>
+    <figure class="img-avatar">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <figcaption class="state">
+        <span class="sr-only">오프라인</span>
+      </figcaption>
+    </figure>
+    <figure class="img-avatar">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+      <figcaption class="state online">
+        <span class="sr-only">온라인</span>
+      </figcaption>
+    </figure>
+    <h2>인터랙션이 있는 버튼 컴포넌트</h2>
+    <!-- 버튼의 기본 type은 submit이므로 button으로 명시  -->
+    <button type="button" class="button-avatar" aria-label="오프라인">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+    </button>
+    <button type="button" class="button-avatar online" aria-label="온라인">
+      <img src="/src/assets/face/face1.jpg" alt="사용자명" />
+    </button>
   </body>
 </html>
