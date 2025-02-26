@@ -1,0 +1,54 @@
+body {
+  font-family: 'Pretendard', sans-serif;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  ul,
+  li {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+/* 멤버 서비스 */
+.member-service {
+  /* display: flow-root; */
+  margin-left: auto;
+  width: fit-content;
+  .item {
+    background: pink;
+    float: left;
+    text-transform: uppercase;
+    &:nth-child(n + 2)::before {
+      content: ':';
+      margin: 0 10px;
+    }
+  }
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+/* 멤버 링크 */
+.member-link {
+  display: flow-root;
+  margin-left: auto;
+  width: fit-content;
+  li {
+    background: pink;
+    float: left;
+    text-transform: uppercase;
+    span {
+      margin: 0 10px;
+    }
+  }
+}
