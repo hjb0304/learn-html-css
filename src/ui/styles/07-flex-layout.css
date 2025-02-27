@@ -1,0 +1,68 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+/* 플렉스를 활용한 반응형 레이아웃 */
+.container {
+  /* 헤더 */
+  .header {
+    background: var(--pastel-coral);
+    height: 10vh;
+  }
+
+  /* 내비게이션 */
+  .navigation {
+    background: var(--pastel-green);
+    height: 15vh;
+  }
+
+  /* 메인 콘텐츠 */
+  .content {
+    background: var(--pastel-aqua);
+    height: 40vh;
+  }
+
+  /* 사이드 바 */
+  .sidebar {
+    background: var(--pastel-yellow);
+    height: 25vh;
+  }
+
+  /* 푸터 */
+  .footer {
+    background: var(--pastel-lavender);
+    height: 10vh;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-flow: row wrap;
+    .wrapper {
+      /* wrapper 요소를 건너뛰고 그 아래 자식들이 container의 직계자식으로 인식된다. */
+      display: contents;
+    }
+
+    .header,
+    .navigation,
+    .footer {
+      width: 100%;
+      inline-size: 100%;
+    }
+    .content,
+    .sidebar {
+      width: 50%;
+      inline-size: 50%;
+      height: 65vh;
+      block-size: 65vh;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .navigation,
+    .sidebar {
+      width: 25%;
+      inline-size: 25%;
+      height: 65vh;
+      block-size: 65vh;
+    }
+  }
+}

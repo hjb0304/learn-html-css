@@ -1,0 +1,28 @@
+.case-01 {
+  writing-mode: vertical-lr;
+  border: 1px solid currentColor;
+  color: green;
+  width: 200px;
+
+  /* float: left 속성을 논리 속성으로 지정 */
+  float: inline-start;
+  /* 가로 크기를 width 속성이 아닌 논리 속성으로 지정 */
+  inline-size: 400px;
+  /* 세로 크기를 width 속성이 아닌 논리 속성으로 지정 */
+  block-size: 100px;
+  overflow: auto;
+  /* padding-left, padding-right 속성을 논리 속성으로 지정 */
+  padding-inline-start: 20px;
+  padding-inline-end: 50px;
+  /* 상하, 좌우를 한번에 논리 속성으로 지정 */
+  padding-inline: 20px;
+  padding-block: 10px;
+  margin-inline: 30px;
+  margin-block: 50px;
+
+  /* position의 offset을 논리 속성 중 단축 표기법으로 지정 */
+  .example {
+    position: absolute;
+    inset: 0;
+  }
+}
