@@ -1,0 +1,44 @@
+@import url(/src/common/modern-reset.css);
+@import url(/src/common/theme.css);
+
+body {
+  margin-block-end: 1200px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  align-content: center;
+  background: #fff;
+  /* 겹치는 순서를 제어 */
+  z-index: 1;
+}
+
+.team {
+  width: 500px;
+  margin: 0 auto 1.25rem auto;
+  box-shadow: #ccc 0 5px 10px;
+  border-radius: 5px;
+  position: sticky;
+  top: 80px;
+  .team-header {
+    display: inline-block;
+    width: 100%;
+    background: var(--pastel-dark-blue);
+    color: #fff;
+    padding: 0.625rem;
+    border-radius: 5px 5px 0 0;
+  }
+  ul {
+    li {
+      background: #fff;
+      padding: 0.625rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}

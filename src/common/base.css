@@ -1,0 +1,14 @@
+/* body 스타일 */
+body {
+  font-family: 'Pretendard', sans-serif;
+  color: #181818;
+  background: #fff;
+  line-height: 1.15;
+  font-weight: 300;
+}
+
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
