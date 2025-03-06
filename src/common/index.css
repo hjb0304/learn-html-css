@@ -1,0 +1,15 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/base.css';
+
+.study-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 1.25rem;
+
+  .study-box {
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+  }
+}
