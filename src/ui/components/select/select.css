@@ -1,0 +1,58 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* Select UI */
+:root {
+  --gray: #757575;
+  --white: #e3e3e3;
+  --green: #2ede75;
+}
+
+body {
+  margin: 20px;
+}
+.select-box {
+  display: inline-grid;
+
+  svg,
+  .select {
+    grid-area: 1/1/2/2;
+  }
+
+  svg {
+    margin: 0 0.5em;
+    &.icon-global {
+      place-self: center start;
+    }
+    &.icon-triangle {
+      place-self: center end;
+    }
+  }
+
+  .select {
+    width: 113px;
+    height: 43px;
+    padding: 0.5em 1.75em;
+    border: 1px solid var(--gray);
+    border-radius: 2px;
+    color: var(--gray);
+    appearance: none;
+    background: transparent;
+    &:focus {
+      border: 3px solid var(--green);
+    }
+    option {
+      width: 120px;
+      padding: 3px 0 0 37px;
+      background: #fff;
+      border-radius: 12px;
+      color: #000;
+      &:hover {
+        background: #fff url(/src/assets/icon/checkmark.svg) no-repeat left 20px
+          center;
+      }
+    }
+  }
+}
